@@ -1,0 +1,177 @@
+@media(max-width:1000px) {
+    .slide-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .slaider h5 {
+        text-align: center;
+    }
+    .Portfolio h2 {
+        text-align: center;
+    }
+    .slide-desc {
+        max-width: 600px;
+    }
+    .slide-images {
+        flex-direction: column;
+    }
+    .box img {
+        width: 100%;
+    }
+    .slick-prev {
+        position: relative;
+        background: #8B4136;
+        border-radius: 20px;
+        color: blanchedalmond;
+    }
+    .slick-next {
+        position: relative;
+        margin: 0;
+        background: #8B4136;
+        border-radius: 20px;
+        color: blanchedalmond;
+    }
+}
+@media(max-width:900px) {
+    nav ul {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: #8B4136;
+        top: 0;
+        left: 0;
+        flex-direction: column;
+        justify-content: center;
+        transition: 0.5s; /* Время открывания и закрывания меню */
+        transform: scale(0); /* Прячет меню */
+        z-index: 100; /* Задаём значение меньше чем кнопка */
+    }
+    nav ul.show {
+        transform: scale(1); /* Добавляем этот запрос после того как написали в скриптах о добавлении класса */
+    }
+    nav li {
+        padding-right: 0;
+        text-align: center;
+    }
+    nav a {
+        font-size: 40px;
+        line-height: 80px;
+    }
+    .header-container {
+        flex-direction: column;
+        padding-top: 35px;
+        margin-bottom: 50px;
+    }
+    .logo {
+        font-size: 35px;
+    }
+    .home-container {
+        text-align: center;
+    }
+    .home-container h1 {
+        font-size: 20px;
+        margin-bottom: 13px;
+    }
+    .home-container p {
+        font-size: 13px;
+        margin-bottom: 40px;
+    }
+    .home-container a {
+        font-size: 13px;
+    }
+    .home {
+        min-height: auto;
+        padding-bottom: 50px;
+    }
+    .mini-menu {
+        display: block;
+        position: fixed;
+        left: 65px;
+        top: 40px;
+        z-index: 101;/* Задаём значение больше чем меню */
+        width: 24px;
+        height: 14px;
+        border: none;
+        background: none;
+        cursor: pointer; /* меняет курсор */
+        outline: none;
+    }
+    .mini-menu::before,
+    .mini-menu::after,
+    .mini-menu span {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background: #F5D6AB;
+        position: absolute;
+        left: 0;
+        transition: 0.5s;
+    }
+    .mini-menu::before {
+        top: 0;
+    }
+    .mini-menu::after {
+        top: 11px;
+    }
+    .mini-menu span {
+        top: 6px;
+    }
+    .mini-menu.active span {
+        width: 0;
+        opacity: 0;
+    }
+    .mini-menu.active::before {
+        transform: rotate(40deg);
+        transform-origin: left; /* указываем ось по которой будет крутится полоска (по умолчанию она по центру) */
+    }
+    .mini-menu.active::after {
+        transform: rotate(-40deg);
+        transform-origin: right;
+        top: 0;
+        left: -5px;
+    }
+    .about-container h2 {
+        text-align: center;
+    }
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .skills-diagram {
+        margin-left: 0;
+        margin-top: 30px;
+    }
+    .skills-container img {
+        max-width: 100%;
+    }
+    .skills h2 {
+        text-align: center;
+    }
+}
+@media(max-width: 600px) {
+    .skills-item {
+        flex-direction: column;
+    }
+    .Podval h2 {
+        text-align: center;
+    }
+    .nomber {
+        display: block;
+    }
+    .contact-3 {
+        display: none;
+    }
+    .contact-4 {
+        display: block;
+        font-size: 18px;
+        font-weight: normal;
+        line-height: 22px;
+        color: var(--black);
+    }
+    .contact-container {
+        justify-content: flex-start;
+        margin-bottom: 30px;
+    }
+}
